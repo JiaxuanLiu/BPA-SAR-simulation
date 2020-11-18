@@ -16,7 +16,7 @@ SAR在网络上算是一个冷门方向，所以相关代码和原理解读其�
 
 首先，我们发射线性调频(LFM)波，其表达式可以如下所示：
 ![公式1](README.assets/公式1.png)
-上述公式中，$t_{fast}$代表快时间数据，$t_{slow}$代表慢时间数据。$rect$为矩形窗函数，代表快时间信号在一个$T_r$时刻内有效。$f_c$代表载波频率，$K_r$代表距离维调频率。
+上述公式中，![](http://latex.codecogs.com/png.latex?\dpi{110}&space;t_{fast})代表快时间数据，![](http://latex.codecogs.com/png.latex?\dpi{110}&space;t_{slow})代表慢时间数据。![](http://latex.codecogs.com/png.latex?\dpi{110}&space;rect)为矩形窗函数，代表快时间信号在一个![](http://latex.codecogs.com/png.latex?\dpi{110}&space;T_r)时刻内有效。![](http://latex.codecogs.com/png.latex?\dpi{110}&space;f_c)代表载波频率，![](http://latex.codecogs.com/png.latex?\dpi{110}&space;K_r)代表距离维调频率。
 
 LFM信号时域部分如下图所示：
 
