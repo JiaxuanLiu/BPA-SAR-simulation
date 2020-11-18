@@ -27,9 +27,7 @@ LFM信号频域部分如下图所示：
 ![LFM波频率-时间图](README.assets/LFM波频率-时间图.jpg)
 
 得到回波信号则对应为：
-$$
-S_t(t_{fast},t_{slow}) = rect((t_{fast}-2R(t_{fslow)}/C)/T_r)rect(t_{slow}-X/v)exp(i\pi K_r(t_{fast}-2R(t_{fslow)}/C)^2)exp(-i4\pi f_c/C*R(t_{slow}))
-$$
+![公式2](README.assets/公式2.png)
 就此，我们可以得到回波信号。
 
 
@@ -45,23 +43,15 @@ $$
 由于时域匹配滤波器需要使用参考信号时间反褶后复共轭作为滤波核，计算量非常大，所以使用频域匹配滤波器更好点。
 
 将原始数据进行距离向FFT，根据驻相点原理，我们可以得到的频率信息为：
-$$
-S_r(f,t_{slow}) = rect(f^2/B_r)rect(t_{slow}-X/v)exp(-i\pi f^2/K_r)exp(-i4\pi (f_c+f)/C*R(t_{slow}))
-$$
+![公式3](README.assets/公式3.png)
 
 
 匹配滤波器是发射信号（参考信号）的复共轭：
-$$
-S_t^*(-t_{fast}) = exp(i\pi K_rt_{fast}^2)
-$$
+![公式4](README.assets/公式4.png)
 FFT之后得到的滤波器是什么呢？
-$$
-H(f) = exp(i\pi f^2/K_r)
-$$
+![公式5](README.assets/公式5.png)
 好了，这么一乘，结果不就出来了么？GOOD。当然ifft之后得到的结果是这个样子：
-$$
-S_t(t_{fast},t_{slow}) = sinc(B_r(t_{fast}-2R(t_{fslow})/C))rect(t_{slow}-X/v)exp(-i4\pi f_c/C*R(t_{slow}))
-$$
+![公式6](README.assets/公式6.png)
 
 
 ### BP计算
