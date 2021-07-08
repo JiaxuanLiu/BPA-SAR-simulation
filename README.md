@@ -1,4 +1,9 @@
+本文CSDN连接：https://blog.csdn.net/qq_40104196/article/details/110136829?spm=1001.2014.3001.5501
+
+个人CSDN连接：https://blog.csdn.net/qq_40104196?spm=1001.2101.3001.5343
+
 # BPA-SAR-simulation
+
 ## 概述
 
 使用后向投影算法(BPA)完成成像仿真
